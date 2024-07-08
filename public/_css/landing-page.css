@@ -234,6 +234,43 @@ body {
     font-size: 13px;
 }
 
+#result-status-screen{
+    height: 220px;
+}
+.error-icon {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    margin-top: 90px;
+}
+.error-icon-svg {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+.loading-animation {
+  margin: auto;
+  margin-top:100px;
+  border: 5px solid #606060;
+  border-radius: 50%;
+  border-top: 5px solid #C8728C;
+  border-bottom: 5px solid #C8728C;
+  width: 30px;
+  height: 30px;
+  animation: spinner 4s linear infinite;
+}
+#status-msg {
+    color: #606060;
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @media only screen and (max-width: 900px) {
 #io-box {
     width: 95%;
