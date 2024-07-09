@@ -23,35 +23,35 @@ function displayResults(data) {
     resultBox.innerHTML = `
         <div class="tweet-box">
             <p>
-            ${data[0]['text']}
+            ${data[0]['tweet']}
             </p>
             <label>1/5</label>
         </div>
         <div class="tweet-connector"></div>
         <div class="tweet-box">
             <p>
-            ${data[1]['text']}
+            ${data[1]['tweet']}
             </p>
             <label>2/5</label>
         </div>
         <div class="tweet-connector"></div>
         <div class="tweet-box">
             <p>
-            ${data[2]['text']}
+            ${data[2]['tweet']}
             </p>
             <label>3/5</label>
         </div>
         <div class="tweet-connector"></div>
         <div class="tweet-box">
             <p>
-            ${data[3]['text']}
+            ${data[3]['tweet']}
             </p>
             <label>4/5</label>
         </div>
         <div class="tweet-connector"></div>
         <div class="tweet-box">
             <p>
-            ${data[4]['text']}
+            ${data[4]['tweet']}
             </p>
             <label>5/5</label>
         </div>
@@ -72,9 +72,7 @@ function generateThread() {
         })
         .then(data => {
             if (data != null){
-                let result = data['result'];
-                result = JSON.parse(result.substring(8, result.length-5));
-                displayResults(result);
+                displayResults(data);
             } else {
                 displayNoResults();
             }
