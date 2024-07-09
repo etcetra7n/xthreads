@@ -16,16 +16,19 @@
     <link rel="stylesheet" href="_css/landing-page.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="_js/xthreads.js"></script>
+    <script type="module" src="_js/firebase-init.js"></script>
+    
 </head>
 <body>
     <div class="bgcolor-black">
         <div class="row" id="top-nav">
             <div id="top-nav-menu">
-                <img class="menu-icon-svg col" src="_static/menu-icon.svg"></img>
+                <p class="navbar-emoji">🧵</p>
+                <!--<img class="menu-icon-svg col" src="_static/menu-icon.svg"></img>-->
             </div>
             <div class="top-navbar-links-div col">
-                <a class="top-navbar-links-a" href="#">Get started</a>
-                <a class="top-navbar-links-a" href="#">Pricing</a>
+                <a class="top-navbar-links-a" href="https://xthreads.pro">Xthreads</a>
+                <!--<a class="top-navbar-links-a" href="#">Pricing</a>-->
             </div>
         </div>
         <div class="blur-ball" id="blur-ball-1"></div>
@@ -102,8 +105,8 @@
                 </div>
             </div>
         </div>
-        <div class="get-started-btn">
-            <label>Get Started</label>
+        <div class="get-started-btn" onclick="document.body.scrollTop = document.documentElement.scrollTop = 0;">
+            <label>Get started</label>
         </div>
         <div id="footer">
             <div class="row">
@@ -118,12 +121,12 @@
                 </div>
                 <div class="col-6" id="footer-socials">
                     <div class="x-social">
-                        <a class="x-social-a"><img class="x-social-svg" src="_static/x-logo-white.svg" alt="SVG Image"></a>
+                        <a href="https://x.com/etcetra7n" class="x-social-a"><img class="x-social-svg" src="_static/x-logo-white.svg" alt="SVG Image"></a>
                     </div>
                 </div>
             </div>
             <div id="footer-copyright">
-                <p>© 2024 Copyright: xthreads.pro</p>
+                <p>© 2024 Copyright: <a class="plain-link-a" href="https://xthreads.pro">xthreads.pro</a></p>
             </div>
         </div>
     </div>
