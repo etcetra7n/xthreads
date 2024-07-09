@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://xthreads.pro">
+    <link rel="canonical" href="https://xthreads.pro/">
     <meta name="description" content="Generate Twitter (X) threads online using AI.">
     <meta name="keywords" content="twitter threads, twitter thread, x threads, x thread, generate twitter thread online, thread generator, thread generator ai">
     <meta name="author" content="John Anchery">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Xthreads">
     <meta property="og:description" content="Generate Twitter (X) threads using AI">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://xthreads.pro/_static/og-icon.png">
     <meta property="og:url" content="https://xthreads.pro/">
 
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@etcetra7n">
     <meta name="twitter:creator" content="@etcetra7n">
     <meta name="twitter:title" content="Xthreads">
@@ -31,8 +32,8 @@
 
     <link rel="stylesheet" href="_css/landing-page.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="_js/xthreads.js"></script>
-    <script type="module" src="_js/firebase-init.js"></script>
+    <script src="_js/xthreads.js" defer></script>
+    <script type="module" src="_js/firebase-init.js" defer></script>
     <link rel="icon" type="image/png" href="favicon.png" sizes="128x128">
     
 </head>
@@ -40,7 +41,7 @@
     <div class="bgcolor-black">
         <div class="row" id="top-nav">
             <div id="top-nav-menu">
-                <img id="nav-thread-icon" src="_static/nav-icon.png"></img>
+                <img id="nav-thread-icon" src="_static/nav-icon.png" alt="logo">
                 <!--<img class="menu-icon-svg col" src="_static/menu-icon.svg"></img>-->
             </div>
             <div class="top-navbar-links-div col">
@@ -61,13 +62,13 @@
         </div>
         <div id="io-box">
             <div id="topic-prompt-box">
-                <label><img src="_static/hashtag-icon.svg"></img> Topic</label>
+                <label><img src="_static/hashtag-icon.svg" alt="hashtag icon"> Topic</label>
                 <div class="row">
                     <div class="prompt-inner-box col-11">
                         <input type="text" id="topic-box" value="History of Homo Sapiens">
                     </div>
                     <div class="tick-mark-icon col-1" onclick="generateThread()">
-                        <img src="_static/tick-mark.svg" alt="SVG Image">
+                        <img class="tick-mark-svg" src="_static/tick-mark.svg" alt="SVG Image">
                     </div>
                 </div>
             </div>
@@ -130,9 +131,9 @@
             <div class="row">
                 <div class="col-6" id="quick-links">
                     <label>Quick links</label>
-                    </br>
+                    <br>
                     <a class="footer-links" href="https://xthreads.pro">Home</a>
-                    </br>
+                    <br>
                     <a class="footer-links" href="mailto:john.anchery@mail.ru">Contact Us</a>
                     <div id="quick-link-design-bar"></div>
                     <div id="quick-link-design-ball"></div>
