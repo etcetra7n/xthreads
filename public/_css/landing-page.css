@@ -12,8 +12,8 @@ body {
 #top-nav {
     height: 73px;
     width: 100%;
-    background-color: rgba(43, 43, 43, 0.2);
-    box-shadow: 0px 4px 20px 4px rgba(0,0,0,0.25);
+    background-color: rgba(40, 40, 40, 0.8);
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.25);
 }
 #top-nav-menu {
     height: 30px;
@@ -258,7 +258,7 @@ body {
     width: 183px;
     color: #fff;
     margin: auto;
-    transform: translateY(-13px);
+    transform: translateY(-15px);
     font-size: 13px;
 }
 
