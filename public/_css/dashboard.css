@@ -14,61 +14,22 @@ body {
     padding:0;
 }
 
-#top-nav {
-    height: 73px;
-    margin:0;
-    padding:0;
-    width: 100%;
-    background-color: rgba(40, 40, 40, 0.8);
-    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.25);
-    font-size: 18px;
-}
-#top-nav-menu {
-    height: 30px;
-    width: 30px;
-    margin:0;
-    padding:0;
-    padding-top: 14px;
-    margin-left: 30px;
-    cursor: pointer;
-}
 #nav-thread-icon {
-    height: 30px;
-    width: 30px;
+    width: 35px;
     margin-left: 14px;
     margin-top: 7px;
-}
-.menu-icon-svg {
-    height: 26px;
-    width: 26px;
-}
-.top-navbar-links-div {
-    padding-left: 30px;
-    margin: auto;
-}
-.top-navbar-links-a {
-    text-decoration: none;
-    color: #ddd;
-    padding-left: 2px;
-}
-.top-navbar-links-a:hover {
-    color: #bfbfbf;
-}
-#main-heading {
-    text-align: center;
-}
-.heading-text {
-    font-size: 70px;
 }
 .crimson-text {
     display: inline;
     color: #C8728C;
 }
-.plain-link-a {
-    color: inherit;
+.plain-link-a{
+    color: #b2b2b2;
+    text-decoration: none;
 }
-.plain-link-a:hover {
-    color: #ddd;
+.plain-link-a:hover{
+    color: #dddddd;
+    text-decoration: none;
 }
 .grey-text {
     color: #79747E;
@@ -82,8 +43,8 @@ body {
     transform: translate(-7px, -23px);
 }
 .blur-ball {
-    height: 74px;
-    width: 74px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background-color: rgba(95, 47, 47, 0.3);
     box-shadow: 0px 0px 250px 283px rgba(95,47,47,0.3);
@@ -101,11 +62,10 @@ body {
 #io-box {
     width: 50%;
     margin: auto;
-    padding: 30px;
-    padding-bottom: 80px;
+    padding: 20px 30px 80px 30px;
     border: 1px solid #5A5A5A;
-    border-radius: 10px;
-    margin-top: 100px;
+    border-radius: 20px;
+    margin-top: 5px;
     margin-bottom: 50px;
     font-size: 17px;
 
@@ -113,20 +73,79 @@ body {
 #result-box {
     margin:auto;
 }
-#topic-prompt-box{
-    height: 120px;
-    /*width: 560px;*/
+.upgrade-btn{
+    background-color: #4D4D4D;
+    margin-left: 5px;
+    padding: 5px 16px 5px 16px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+}
+.prompt-btn-row{
+    text-align: right;
+    padding-top: 8px;
+}
+.prompt-btns{
+    background-color: #4D4D4D;
+    width: 150px;
+    padding: 10px 16px 9px 16px;
+    border: none;
+    border-radius: 6px!important;
+    color: #ffffff;
+}
+.upgrade-btn:hover{
+    background-color: #585858;
+}
+.prompt-btns:hover{
+    background-color: #585858;
+}
+.submit-btn-row{
+    text-align: center;
+}
+#submit-btn{
+    font-size: 19px;
+    background-color: #5E82C9;
+    color: #ffffff;
+    border: none;
+    padding: 8px 24px 8px 18px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+#submit-btn:hover{
+    background-color: #7192DD;
+}
+#export-btn{
+    font-size: 23px;
+    color: #A8A8A8;
+    background-color: #373737;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px 10px 25px;
+}
+#export-btn img{
+    width: 23px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.promt-sec{
+    padding-top:10px;
+}
+.prompt-key{
+    font-size: 19px !important;
+}
+#prompt-box{
     margin: 50px 30px 20px 50px;
+    padding:30px 60px 40px 30px;
     margin-top: 80px;
-    background-color: #5F4F6F;
+    background-color: #373737;
     border-radius: 20px;
 }
-#topic-prompt-box img {
-    height: 21px;
-    width: 18px;
-    padding-bottom: 2px;
+#prompt-box img {
+    width: 24px;
+    margin-bottom: 2px;
+    margin-right: 9px;
 }
-#topic-prompt-box label{
+#prompt-box label{
     padding-top: 15px;
     padding-left: 26px;
     color: #D5D3D3;
@@ -136,11 +155,11 @@ body {
 
 .prompt-inner-box input{
     height: 46px;
-    width: 100%;
+    width:100%;
     padding-bottom: 3px;
     padding-left: 12px;
     color: #D5D3D3;
-    font-size: 20px;
+    font-size: 18px;
     background-color: inherit;
     border: none;
 }
@@ -149,12 +168,11 @@ body {
 }
 
 .prompt-inner-box {
-    height: 46px;
-    width: 80%;
-    margin-left: 40px;
+    height: 47px;
+    margin: auto;
     margin-top: 6px;
-    border: 1px solid #7d7781;
-    border-radius: 5px;
+    border: 1px solid #747474;
+    border-radius: 8px;
 }
 #tick-mark-icon {
     height: 25px;
@@ -312,8 +330,24 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
+@media only screen and (max-width: 1500px) {
+    #io-box {
+        width: 70%;
+    }
+}
 @media only screen and (max-width: 900px) {
+.blur-ball {
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background-color: rgba(95, 47, 47, 0.3);
+    box-shadow: 0px 0px 250px 283px rgba(95,47,47,0.3);
+}
+.prompt-btn-row{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 50px;
+}
 .X-app-logo{
     display: block;
     transform: translateY(28px);
@@ -338,19 +372,21 @@ body {
     border:none;
     /*border-radius: 10px;*/
 }
+.submit-btn-row{
+    margin-top: 30px;
+    text-align: center;
+}
+#submit-btn{
+    margin-left: 22px;
+    margin-right: 0px;
+}
 #topic-prompt-box{
     width: 100%;
     margin: auto;
     border-radius:10px;
 }
 .prompt-inner-box {
-    height: 46px;
-    width: 66%;
-    margin-left: 40px;
-}
-#tick-mark-icon {
-    margin-top: 18px;
-    width: 70px;
+    margin-left: 30px;
 }
 #blur-ball-2 {
     display: none;

@@ -1,0 +1,171 @@
+body {
+    background-color: #1F1F1F;
+    overflow-x: hidden;
+}
+#pricing-sec{
+    padding-top: 120px;
+}
+#pricing-heading{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#pricing-heading h3{
+    font-size: 50px;
+    color: #dddddd;
+}
+#pricing-label label{
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#pricing-label label{
+    color: #979797;
+    font-size: 24px;
+    padding-bottom: 30px;
+}
+#pricing-container{
+    width: 80%;
+    padding: 0;
+    
+}
+.pricing-box-layout{
+    padding: 0px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+.pricing-box{
+    background-color: #212327;
+    height: 500px;
+    width: 420px;
+    margin:0;
+    padding: 0;
+    margin:auto;
+    /*border: 1px solid #686868;*/
+    border-radius: 30px;
+    padding-top: 14px;
+    padding-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 8.0px 16.0px 20.0px hsl(0deg 0% 0% / 0.25);
+    bottom: 0px;
+    animation: box-move-down 0.2s;
+}
+.pricing-box:hover{
+    bottom:5px;
+    animation: box-move-up 0.2s;
+}
+@keyframes box-move-up {
+  from {bottom: 0px;}
+  to {bottom: 5px;}
+}
+@keyframes box-move-down {
+  from {bottom: 5px;}
+  to {bottom: 0px;}
+}
+
+.plan-name{
+    color: #cccccc;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+.current-label{
+    color:#A1A1A1;
+    font-size: 17px;
+}
+.price-tag{
+    color: #cccccc;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.pricing-dollar-sign{
+    color: #888888;
+    font-size: px;
+}
+.pricing-usd{
+    color: #888888;
+    font-size: 15px;
+}
+.pricing-feature{
+    color: #cccccc;
+    font-size: 21px;
+    padding-left: 50px;
+    padding-bottom: 16px;
+}
+.pricing-feature label{
+    padding-left: 8px;
+}
+.btn-container{
+    position: absolute;
+    width: 100%;
+    bottom: 45px;
+    text-align: center;
+    /*animation: btn-move-down 0.1s;*/
+}
+/*@keyframes btn-move-up {
+  from {bottom: 45px;}
+  to {bottom: 50px;}
+}
+@keyframes btn-move-down {
+  from {bottom: 50px;}
+  to {bottom: 45px;}
+}*/
+.pricing-button button{
+    background-color: #4287f5;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 25px 9px 25px;
+    text-align: center;
+    font-size: 19px;
+}
+.pricing-button button:hover{
+    background-color: #4B90FE;
+}
+.pricing-button button label{
+    cursor: pointer;
+}
+@media only screen and (max-width: 1700px) {
+    #pricing-container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #pricing-container{
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pricing-box{
+        width: 85%;
+        height: 470px;
+        padding-right: 0px;
+    }
+    .pricing-feature{
+        font-size: 17px;
+        text-align: left;
+    }
+}

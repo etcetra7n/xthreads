@@ -1,3 +1,20 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js';
+import { getAnalytics, logEvent } from'https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBTWRBRhyRsqhYPmkeaAS67eWKmnop3hdg",
+  authDomain: "xthreadspro.firebaseapp.com",
+  projectId: "xthreadspro",
+  storageBucket: "xthreadspro.appspot.com",
+  messagingSenderId: "566833473201",
+  appId: "1:566833473201:web:86b84622321f0a983fa490",
+  measurementId: "G-FPLFBBCDJN"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const submitBtn = document.getElementById("tick-mark-icon");
+
 function showLoadingScreen() {
     let resultBox = document.getElementById("result-box");
     resultBox.innerHTML = `
@@ -20,48 +37,34 @@ function displayNoResults() {
 }
 function displayResults(data) {
     let resultBox = document.getElementById("result-box");
-    resultBox.innerHTML = `
+    resultBox.innerHTML = "";
+    for (let i = 0; i < data.length; i++) {
+      resultBox.innerHTML += `
         <div class="tweet-box">
             <p>
-            ${data[0]['tweet']}
+            ${data[i]['tweet']}
             </p>
-            <label>1/5</label>
+            <label>${i+1}/${data.length}</label>
         </div>
-        <div class="tweet-connector"></div>
-        <div class="tweet-box">
-            <p>
-            ${data[1]['tweet']}
-            </p>
-            <label>2/5</label>
-        </div>
-        <div class="tweet-connector"></div>
-        <div class="tweet-box">
-            <p>
-            ${data[2]['tweet']}
-            </p>
-            <label>3/5</label>
-        </div>
-        <div class="tweet-connector"></div>
-        <div class="tweet-box">
-            <p>
-            ${data[3]['tweet']}
-            </p>
-            <label>4/5</label>
-        </div>
-        <div class="tweet-connector"></div>
-        <div class="tweet-box">
-            <p>
-            ${data[4]['tweet']}
-            </p>
-            <label>5/5</label>
-        </div>
-    `;
+        `;
+        if (i != data.length-1){
+            resultBox.innerHTML += `
+            <div class="tweet-connector"></div>
+            `;
+        }
+        
+    }
 }
 
-function generateThread() {
+submitBtn.onclick = function() {
     showLoadingScreen();
-    topic = document.getElementById("topic-box").value;
-    const url = "https://xthreads.netlify.app/.netlify/functions/generate-thread?topic="+topic;
+    const topic = document.getElementById("topic-box").value;
+    const url = "https://xthreads.netlify.app/.netlify/functions/generateThread?topic="+topic;
+
+    logEvent(analytics, 'generate_thread', {
+        value: topic
+    });
+
     // Make a GET request to invoke the function
     fetch(url)
         .then(response => {
@@ -82,4 +85,4 @@ function generateThread() {
             console.error('There was a problem with the fetch operation:', error);
         });
         
-}
+};
