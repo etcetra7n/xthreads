@@ -1,4 +1,5 @@
 api_keys/
-.firebase/
+.firebase/*
 .firebaserc
 test/
+firebase-debug.log
